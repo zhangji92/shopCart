@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WechatOrder</string>
+    <string name="app_logo">logo</string>
+    <string name="app_title">标题</string>
+    <string name="menu_name">菜单</string>
+    <string name="dish_name">菜单</string>
+</resources>

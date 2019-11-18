@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.uuj.wechat.order"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-rc01'
+
+    // rxjava 核心包
+    implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.13'
+    // rxjava 支持 android 包
+    implementation group: 'io.reactivex.rxjava2', name: 'rxandroid', version: '2.1.1'
+    // okhttp 网络请求库
+    implementation group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '4.2.2'
+    // retrofit 核心包
+    implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.6.2'
+    // retrofit gson工厂
+    implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.6.2'
+    // retrofit 支持 rxjava 库
+    implementation group: 'com.squareup.retrofit2', name: 'adapter-rxjava2', version: '2.6.2'
+    // 注解式绑定控件
+    implementation group: 'com.jakewharton', name: 'butterknife', version: '10.2.0'
+    implementation group: 'com.jakewharton', name: 'butterknife-annotations', version: '10.2.0'
+    annotationProcessor group: 'com.jakewharton', name: 'butterknife-compiler', version: '10.2.0'
+}
